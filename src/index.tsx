@@ -17,8 +17,3 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-
-
-let b: Array<number>;
-b = [1, 2, 3, 4, 5, 6, 7, 8],
-    console.log(b);
