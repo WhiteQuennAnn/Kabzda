@@ -1,10 +1,20 @@
 import React from 'react';
 import './App.css';
 
+
+
+ function hello() {
+     debugger
+     alert('Hello, Anya')
+ }
+ hello();
+
+
+
 // function declaration
 function App() {
     // полезное что-то
-
+    debugger
     // обязана вернуть JSX
     return (
         <div>
@@ -14,6 +24,7 @@ function App() {
 }
 
 function Rating() {
+    debugger
     return (
         <div>
             <div>start</div>
@@ -26,16 +37,18 @@ function Rating() {
 }
 
 function Accordion() {
-    return
-        <div>
-            <h3> Меню </h3>
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-            </ul>
-        </div>
+    debugger
+    return (
 
+    <div>
+        <h3> Меню </h3>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+    )
 }
 
 export default App;
