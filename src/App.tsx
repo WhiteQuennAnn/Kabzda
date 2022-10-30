@@ -18,6 +18,12 @@ function App() {
            <Accordion/>
             Article 2
             <Rating value={4}/>
+
+            <Rating value={4}/>
+
+            <Rating value={4}/>
+
+            <Rating value={4}/>
         </div>
     );
 }
