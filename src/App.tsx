@@ -12,7 +12,7 @@ function App() {
 
         <div>
 
-            <input />
+            <input value = {"rtrtty"} />
             <input type = "date"/>
 
            <AppTitle />
