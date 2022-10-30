@@ -13,25 +13,22 @@ function App() {
 
         <div>
             < img src={"https://infogra.ru/wp-content/uploads/2016/09/halloween-greeting-card_23-2147519110.jpg"} />
-            <AppTitle/>
+            <PageTitle/>
             Article 1
             <Rating value={3}/>
            <Accordion/>
             Article 2
             <Rating value={5}/>
-
             <Rating value={4}/>
-
             <Rating value={4}/>
-
             <Rating value={1}/>
         </div>
     );
 }
 
-function AppTitle() {
-    console.log("AppTitle rendered")
-    return <div> This is APP component</div>
+function PageTitle() {
+    console.log("PageTitle rendered")
+    return <h1> This is APP component</h1>
 }
 
 export default App;
