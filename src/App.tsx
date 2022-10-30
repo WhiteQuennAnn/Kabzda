@@ -7,10 +7,14 @@ import {Rating} from "./components/Rating/Rating";
 function App() {
     console.log("App rendering")
     // полезное что-то
-    debugger
-    // обязана вернуть JSX
+       // обязана вернуть JSX
     return (
+
         <div>
+
+            <input />
+            <input type = "password"/>
+
            <AppTitle />
             <Rating />
             <Rating />
@@ -23,7 +27,4 @@ function AppTitle() {
     console.log("AppTitle rendered")
     return <> This is APP component</>
 }
-
-
-
 export default App;
