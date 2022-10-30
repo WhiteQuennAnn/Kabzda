@@ -13,7 +13,7 @@ function App() {
         <div>
 
             <input />
-            <input type = "password"/>
+            <input type = "date"/>
 
            <AppTitle />
             <Rating />
