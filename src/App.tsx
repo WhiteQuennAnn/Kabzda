@@ -1,15 +1,6 @@
 import React from 'react';
 import './App.css';
 
-
-function hello() {
-    debugger
-    alert('Hello, Anya')
-}
-
-hello();
-
-
 // function declaration
 function App() {
     // полезное что-то
@@ -17,29 +8,34 @@ function App() {
     // обязана вернуть JSX
     return (
         <div>
-            This is APP component
-            <Rating/>
-            <Accordion/>
+           <AppTitle />
+            <Rating />
+            <Rating />
+            <Accordion />
         </div>
     );
+}
+
+function AppTitle() {
+    return <div> This is APP component</div>
 }
 
 function Rating() {
     debugger
     return (
         <Star/>
-)
+    )
 }
 
 function Star() {
 
     return (
         <div>
-        <div>star</div>
-    <div>star</div>
-    <div>star</div>
-    <div>star</div>
-    <div>star</div>
+            <div>star</div>
+            <div>star</div>
+            <div>star</div>
+            <div>star</div>
+            <div>star</div>
         </div>
     )
 }
