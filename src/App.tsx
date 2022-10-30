@@ -18,10 +18,6 @@ function App() {
     return (
 
         <div>
-
-            <input value = {"rtrtty"} />
-            <input checked={true} type = "date"/>
-
            <AppTitle />
             <Rating />
             <Rating />
