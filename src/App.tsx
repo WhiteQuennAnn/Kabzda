@@ -14,10 +14,10 @@ function App() {
         <div>
             <AppTitle/>
             Article 1
-            <Rating/>
+            <Rating value={3}/>
            <Accordion/>
             Article 2
-            <Rating/>
+            <Rating value={4}/>
         </div>
     );
 }
