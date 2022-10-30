@@ -12,18 +12,19 @@ function App() {
     return (
 
         <div>
+            < img src={"https://infogra.ru/wp-content/uploads/2016/09/halloween-greeting-card_23-2147519110.jpg"} />
             <AppTitle/>
             Article 1
             <Rating value={3}/>
            <Accordion/>
             Article 2
-            <Rating value={4}/>
+            <Rating value={5}/>
 
             <Rating value={4}/>
 
             <Rating value={4}/>
 
-            <Rating value={4}/>
+            <Rating value={1}/>
         </div>
     );
 }
