@@ -12,11 +12,11 @@ function App() {
     return (
 
         <div>
-            < img src={"https://infogra.ru/wp-content/uploads/2016/09/halloween-greeting-card_23-2147519110.jpg"} />
-            <PageTitle/>
+            <PageTitle title={"This is APP component"}/>
+            <PageTitle title={"My friends"}/>
             Article 1
             <Rating value={3}/>
-           <Accordion/>
+            <Accordion/>
             Article 2
             <Rating value={5}/>
             <Rating value={4}/>
@@ -26,9 +26,10 @@ function App() {
     );
 }
 
-function PageTitle() {
+function PageTitle(props: any) {
     console.log("PageTitle rendered")
-    return <h1> This is APP component</h1>
+    debugger
+    return <h1> {props.title}</h1>
 }
 
 export default App;
