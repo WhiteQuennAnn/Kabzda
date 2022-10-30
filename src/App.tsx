@@ -41,8 +41,7 @@ function Star() {
 }
 
 function Accordion() {
-    debugger
-    return (
+       return (
 
         <div>
             <h3> Меню </h3>
