@@ -17,7 +17,7 @@ function App() {
 }
 
 function AppTitle() {
-    return <div> This is APP component</div>
+    return <> This is APP component</>
 }
 
 function Rating() {
