@@ -1,6 +1,7 @@
 import React from "react";
 
 function Accordion(props: any) {
+    debugger
     console.log("Accordion rendering")
     return (
         <div>

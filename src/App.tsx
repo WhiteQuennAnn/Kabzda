@@ -5,7 +5,7 @@ import {Rating} from "./components/Rating/Rating";
 
 
 // function declaration
-function App() {
+function App(props: any) {
     console.log("App rendering")
     // полезное что-то
     // обязана вернуть JSX
@@ -14,11 +14,11 @@ function App() {
         <div>
             <PageTitle title={"This is APP component"}/>
             <PageTitle title={"My friends"}/>
-            Article 1
-            <Rating value={3}/>
-            <Accordion titleValue={"Menu"}/>
-            <Accordion titleValue={"Users"}/>
-            Article 2
+            {/*Article 1*/}
+            {/*<Rating value={3}/>*/}
+            {/*<Accordion titleValue={"Menu"}/>*/}
+            {/*<Accordion titleValue={"Users"}/>*/}
+            {/*Article 2*/}
             <Rating value={5}/>
             <Rating value={4}/>
             <Rating value={4}/>
