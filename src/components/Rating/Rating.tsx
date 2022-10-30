@@ -11,7 +11,7 @@ export function Rating(props: RatingPropsType) {
         return (
             <div>
                 <Star selected={true}/>
-                <Star selected={false}/>I
+                <Star selected={false}/>
                 <Star selected={false}/>
                 <Star selected={false}/>
                 <Star selected={false}/>
@@ -22,7 +22,7 @@ export function Rating(props: RatingPropsType) {
         return (
             <div>
                 <Star selected={true}/>
-                <Star selected={true}/>I
+                <Star selected={true}/>
                 <Star selected={false}/>
                 <Star selected={false}/>
                 <Star selected={false}/>
@@ -33,7 +33,7 @@ export function Rating(props: RatingPropsType) {
         return (
             <div>
                 <Star selected={true}/>
-                <Star selected={true}/>I
+                <Star selected={true}/>
                 <Star selected={true}/>
                 <Star selected={false}/>
                 <Star selected={false}/>
@@ -44,7 +44,7 @@ export function Rating(props: RatingPropsType) {
         return (
             <div>
                 <Star selected={true}/>
-                <Star selected={true}/>I
+                <Star selected={true}/>
                 <Star selected={true}/>
                 <Star selected={true}/>
                 <Star selected={false}/>
@@ -55,7 +55,7 @@ export function Rating(props: RatingPropsType) {
         return (
             <div>
                 <Star selected={true}/>
-                <Star selected={true}/>I
+                <Star selected={true}/>
                 <Star selected={true}/>
                 <Star selected={true}/>
                 <Star selected={true}/>
