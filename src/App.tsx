@@ -8,6 +8,8 @@ import {Rating} from "./components/Rating/Rating";
 function sum(a:number, b:number) {
     alert (a+b)
 }
+sum(25,12);
+
 // function declaration
 function App() {
     console.log("App rendering")

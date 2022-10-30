@@ -13,7 +13,7 @@ export function Rating() {
     )
 }
 
-function Star() {
+function Star(props: any) {
     console.log("Star rendering")
     return (
               <span> <b>star </b></span>
