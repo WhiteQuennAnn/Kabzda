@@ -1,9 +1,10 @@
 import React from "react";
 
-function Accordion() {
+function Accordion(props: any) {
     console.log("Accordion rendering")
     return (
         <div>
+            --- {props.title}
             <AccordionTitle />
             <AccordionBody />
         </div>
