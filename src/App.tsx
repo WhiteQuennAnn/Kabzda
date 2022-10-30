@@ -3,6 +3,7 @@ import './App.css';
 
 // function declaration
 function App() {
+    console.log("App rendering")
     // полезное что-то
     debugger
     // обязана вернуть JSX
@@ -17,18 +18,19 @@ function App() {
 }
 
 function AppTitle() {
+    console.log("AppTitle rendered")
     return <> This is APP component</>
 }
 
 function Rating() {
-    debugger
+    console.log("Rating rendering")
     return (
         <Star/>
     )
 }
 
 function Star() {
-
+    console.log("Star rendering")
     return (
         <div>
             <div>star</div>
@@ -41,6 +43,7 @@ function Star() {
 }
 
 function Accordion() {
+    console.log("Accordion rendering")
        return (
 
         <div>
