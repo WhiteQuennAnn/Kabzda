@@ -8,20 +8,23 @@ import {Rating} from "./components/Rating/Rating";
 function App() {
     console.log("App rendering")
     // полезное что-то
-       // обязана вернуть JSX
+    // обязана вернуть JSX
     return (
 
         <div>
-           <AppTitle />
-            <Rating />
-            <Rating />
-            <Accordion />
+            <AppTitle/>
+            Article 1
+            <Rating/>
+           <Accordion/>
+            Article 2
+            <Rating/>
         </div>
     );
 }
 
 function AppTitle() {
     console.log("AppTitle rendered")
-    return <> This is APP component</>
+    return <div> This is APP component</div>
 }
+
 export default App;
