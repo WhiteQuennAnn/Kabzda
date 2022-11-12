@@ -6,7 +6,7 @@ type AccordionPropsType = {
 }
 
 function Accordion(props: AccordionPropsType) {
-    debugger
+
     console.log("Accordion rendering")
 
     return (
