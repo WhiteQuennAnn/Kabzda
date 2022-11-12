@@ -1,7 +1,7 @@
 import React from "react";
 
-type AccordionPropsType ={
-    titleValue: string;
+type AccordionPropsType = {
+    titleValue: string
     collapsed: boolean
 }
 
@@ -16,7 +16,7 @@ function Accordion(props: AccordionPropsType) {
     )
 }
 
-type AccordionTitlePropsType ={
+type AccordionTitlePropsType = {
     title: string
 }
 
