@@ -29,8 +29,7 @@ function Star(props: StarPropsType) {
         return <span>star </span>
 
     }
+}
 
-}
-}
 
 
