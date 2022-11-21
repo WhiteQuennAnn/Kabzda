@@ -3,6 +3,7 @@ import './App.css';
 import Accordion from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff";
+import UnControlledAccordion from "./components/AccordionUnControlled/UnControlledAccordion";
 
 // function declaration
 function App(props: any) {
@@ -15,10 +16,9 @@ function App(props: any) {
             <OnOff/>
             <OnOff/>
             <OnOff/>
-            {/*<OnOff on={false}/>*/}
-            {/*<OnOff on={true}/>*/}
-            {/*<Accordion titleValue={"Menu"} collapsed={true}/>*/}
-            {/*<Accordion titleValue={"Users"} collapsed={false}/>*/}
+
+            <UnControlledAccordion titleValue={"Menu"} />
+            <UnControlledAccordion titleValue={"Users"} />
             {/*<Rating value={0}/>*/}
             {/*<Rating value={1}/>*/}
             {/*<Rating value={2}/>*/}
