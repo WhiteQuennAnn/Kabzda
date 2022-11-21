@@ -15,6 +15,8 @@ function App(props: any) {
 
         <div>
             <OnOff on={true}/>
+            <OnOff on={false}/>
+            <OnOff on={true}/>
             {/*<Accordion titleValue={"Menu"} collapsed={true}/>*/}
             {/*<Accordion titleValue={"Users"} collapsed={false}/>*/}
             {/*<Rating value={0}/>*/}
