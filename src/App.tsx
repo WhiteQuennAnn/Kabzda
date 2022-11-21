@@ -11,14 +11,13 @@ function App(props: any) {
     // полезное что-то
     // обязана вернуть JSX
     return (
+        <div className={"App"}>
+            <OnOff/>
+            {/*<OnOff/>*/}
+            {/*<OnOff/>*/}
 
-        <div>
-            <OnOff/>
-            <OnOff/>
-            <OnOff/>
-
-            <UnControlledAccordion titleValue={"Menu"} />
-            <UnControlledAccordion titleValue={"Users"} />
+            <UnControlledAccordion titleValue={"Menu"}/>
+            {/*<UnControlledAccordion titleValue={"Users"}/>*/}
             {/*<Rating value={0}/>*/}
             {/*<Rating value={1}/>*/}
             {/*<Rating value={2}/>*/}

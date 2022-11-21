@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 type AccordionPropsType = {
     titleValue: string
@@ -8,7 +8,7 @@ type AccordionPropsType = {
 function UnControlledAccordion(props: AccordionPropsType) {
 
     console.log("UnControlledAccordion rendering")
-    const collapsed = true;
+    let [collapsed, setCollapsed ]  = useState(false);
 
     return (
         <div>
