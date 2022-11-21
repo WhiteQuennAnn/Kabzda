@@ -8,6 +8,7 @@ import {UnControlledRating} from "./components/UnControlledRating/UnControlledRa
 
 // function declaration
 function App(props: any) {
+
     console.log("App rendering")
     // полезное что-то
     // обязана вернуть JSX
@@ -19,7 +20,10 @@ function App(props: any) {
 
 
             <UnControlledAccordion titleValue={"Users"}/>
+            <Accordion titleValue={"Menu"} collapsed={false}/>
             <UnControlledRating/>
+            <Rating value={2}/>
+
 
             {/*<UnControlledRating value={1}/>*/}
             {/*<UnControlledRating value={2}/>*/}
