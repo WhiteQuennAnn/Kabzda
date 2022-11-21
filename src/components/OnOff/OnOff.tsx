@@ -1,18 +1,20 @@
 import React from 'react';
 
 type PropsType = {
-    on: boolean
-    // off: boolean
+    // on: boolean
+
 }
 
 function OnOff(props: PropsType) {
+    const on = false
+
     const onStyle = {
         widht: "50px",
         height: "40px",
         border: "1px solid black",
         display: "inline-block",
         padding: "2px",
-        backgroundColor: props.on ? "green" : "white"
+        backgroundColor: on ? "green" : "white"
     }
     const offStyle = {
         widht: "50px",
@@ -21,7 +23,7 @@ function OnOff(props: PropsType) {
         display: "inline-block",
         marginLeft: "2px",
         padding: "2px",
-        backgroundColor: props.on ? "white" : "red"
+        backgroundColor: on ? "white" : "red"
     }
     const indicatorStyle = {
         widht: "50px",
@@ -31,7 +33,7 @@ function OnOff(props: PropsType) {
         display: "inline-block",
         marginLeft: "5px",
         padding: "2px",
-        backgroundColor: props.on ? "green" : "red"
+        backgroundColor: on ? "green" : "red"
     }
     return (
         <div>
