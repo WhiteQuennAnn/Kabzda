@@ -4,8 +4,6 @@ import Accordion from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff";
 
-
-
 // function declaration
 function App(props: any) {
     console.log("App rendering")

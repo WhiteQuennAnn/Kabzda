@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 type PropsType = {
     // on: boolean
@@ -6,7 +6,11 @@ type PropsType = {
 }
 
 function OnOff(props: PropsType) {
-    const on = false
+    console.log("OnOffRenedering")
+
+    let [on, setOn] = useState(false); //hook with init value
+    console.log("on:" + on)
+
 
     const onStyle = {
         widht: "50px",
@@ -35,10 +39,11 @@ function OnOff(props: PropsType) {
         padding: "2px",
         backgroundColor: on ? "green" : "red"
     }
+
     return (
         <div>
-            <div style={onStyle}></div>
-            <div style={offStyle}></div>
+            <div style={onStyle} onClick={() => setOn(true)}></div>
+            <div style={offStyle} onClick={() => setOn(false)}></div>
             <div style={indicatorStyle}></div>
         </div>
     )
