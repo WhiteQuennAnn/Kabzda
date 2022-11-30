@@ -18,7 +18,7 @@ function App(props: any) {
             {/*<Accordion titleValue={"Menu"} collapsed={false}/>*/}
 
             <Rating value={ratingValue} onClick={setRatingValue}/>
-
+<UnControlledRating/>
 
             {/*<UnControlledRating value={1}/>*/}
             {/*<UnControlledRating value={2}/>*/}
