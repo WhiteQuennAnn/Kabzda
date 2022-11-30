@@ -5,6 +5,7 @@ import {Rating, RatingValueType} from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff";
 import UnControlledAccordion from "./components/AccordionUnControlled/UnControlledAccordion";
 import {UnControlledRating} from "./components/UnControlledRating/UnControlledRating";
+import UnControlledOnOff from "./components/UnControlledOnOff/UnControlledOnOff";
 
 // function declaration
 function App(props: any) {
@@ -26,6 +27,8 @@ function App(props: any) {
                     onClick={setRatingValue}/>
             <UnControlledRating/>
             <OnOff on={switchOn} onChange={setSwitchOn}/>
+
+            <UnControlledOnOff onChange={setSwitchOn}/> {switchOn.toString()}
 
             {/*<UnControlledRating value={1}/>*/}
             {/*<UnControlledRating value={2}/>*/}
