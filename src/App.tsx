@@ -11,18 +11,21 @@ function App(props: any) {
     console.log("App rendering")
     let [ratingValue, setRatingValue] = useState<RatingValueType>(4)
     let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
-
+    let [switchOn, setSwitchOn] = useState<boolean>(false); //hook with init value
 
     return (
         <div className={"App"}>
             {/*<UnControlledAccordion titleValue={"Users"}/>*/}
 
             <Accordion titleValue={"Menu"}
-                       collapsed={accordionCollapsed}  onChange={() => {setAccordionCollapsed(!accordionCollapsed)}}/>
+                       collapsed={accordionCollapsed} onChange={() => {
+                setAccordionCollapsed(!accordionCollapsed)
+            }}/>
 
             <Rating value={ratingValue}
                     onClick={setRatingValue}/>
-<UnControlledRating/>
+            <UnControlledRating/>
+            <OnOff on={switchOn} onChange={setSwitchOn}/>
 
             {/*<UnControlledRating value={1}/>*/}
             {/*<UnControlledRating value={2}/>*/}

@@ -1,16 +1,15 @@
 import React, {useState} from 'react';
 
 type PropsType = {
-    // on: boolean
+    on: boolean
+    onChange: (on: boolean) => void
 
 }
 
 function OnOff(props: PropsType) {
     console.log("OnOffRenedering")
 
-    let [on, setOn] = useState(false); //hook with init value
-    console.log("on:" + on)
-
+    console.log("on:" + props.on)
 
     const onStyle = {
         widht: "50px",
@@ -18,7 +17,7 @@ function OnOff(props: PropsType) {
         border: "1px solid black",
         display: "inline-block",
         padding: "2px",
-        backgroundColor: on ? "green" : "white"
+        backgroundColor: props.on ? "green" : "white"
     }
     const offStyle = {
         widht: "50px",
@@ -27,7 +26,7 @@ function OnOff(props: PropsType) {
         display: "inline-block",
         marginLeft: "2px",
         padding: "2px",
-        backgroundColor: on ? "white" : "red"
+        backgroundColor: props.on ? "white" : "red"
     }
     const indicatorStyle = {
         widht: "50px",
@@ -37,13 +36,13 @@ function OnOff(props: PropsType) {
         display: "inline-block",
         marginLeft: "5px",
         padding: "2px",
-        backgroundColor: on ? "green" : "red"
+        backgroundColor: props.on ? "green" : "red"
     }
 
     return (
         <div>
-            <div style={onStyle} onClick={() => setOn(true)}></div>
-            <div style={offStyle} onClick={() => setOn(false)}></div>
+            <div style={onStyle} onClick={() => props.onChange(true)}></div>
+            <div style={offStyle} onClick={() => props.onChange(false)}></div>
             <div style={indicatorStyle}></div>
         </div>
     )
