@@ -1,27 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Accordion from "./components/Accordion/Accordion";
-import {Rating} from "./components/Rating/Rating";
+import {Rating, RatingValueType} from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff";
 import UnControlledAccordion from "./components/AccordionUnControlled/UnControlledAccordion";
 import {UnControlledRating} from "./components/UnControlledRating/UnControlledRating";
 
 // function declaration
 function App(props: any) {
-
     console.log("App rendering")
-    // полезное что-то
-    // обязана вернуть JSX
+    let [ratingValue, setRatingValue] = useState<RatingValueType>(4)
+
+
     return (
         <div className={"App"}>
-            <OnOff/>
-            {/*<OnOff/>*/}
-            {/*<OnOff/>*/}
+            {/*<UnControlledAccordion titleValue={"Users"}/>*/}
+            {/*<Accordion titleValue={"Menu"} collapsed={false}/>*/}
 
-
-            <UnControlledAccordion titleValue={"Users"}/>
-            <Accordion titleValue={"Menu"} collapsed={false}/>
-            <Rating value={2}/>
+            <Rating value={ratingValue} onClick={setRatingValue}/>
 
 
             {/*<UnControlledRating value={1}/>*/}
