@@ -21,7 +21,6 @@ function App(props: any) {
 
             <UnControlledAccordion titleValue={"Users"}/>
             <Accordion titleValue={"Menu"} collapsed={false}/>
-            <UnControlledRating/>
             <Rating value={2}/>
 
 
