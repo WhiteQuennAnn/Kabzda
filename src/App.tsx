@@ -42,7 +42,6 @@ function App(props: any) {
             <ControlledInput/>
             <ControlledCheckbox/>
             <ControlledSelect/>
-
             <GetValueOfUncontrolledInputByButtonPress/>
 
         </div>
