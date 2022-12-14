@@ -15,6 +15,22 @@ export const TrackValueOfUncontrolledInput = () => {
     }}/>
     </>
 }
+export const GetValueOfUncontrolledInputByButtonPress = () => {
+    const [value, setValue] = useState("");
+    const inputRef = useRef(null)
+
+
+    return <> <input id={"inputId"}/>
+        <button onClick={(e) => {
+            const el = document.getElementById("inputId") as HTMLInputElement;
+            setValue(el.value);
+        }
+
+        }> save
+        </button>
+        - actual value: {value}
+    </>
+}
 
 export const ControlledInput = () => <input value={"Anna"}/>;
 

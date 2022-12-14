@@ -6,7 +6,12 @@ import OnOff from "./components/OnOff/OnOff";
 import UnControlledAccordion from "./components/AccordionUnControlled/UnControlledAccordion";
 import {UnControlledRating} from "./components/UnControlledRating/UnControlledRating";
 import UnControlledOnOff from "./components/UnControlledOnOff/UnControlledOnOff";
-import {ControlledInput, TrackValueOfUncontrolledInput, UncontrolledInput} from "./components/Input/UncontrolledInput";
+import {
+    ControlledInput,
+    GetValueOfUncontrolledInputByButtonPress,
+    TrackValueOfUncontrolledInput,
+    UncontrolledInput
+} from "./components/Input/UncontrolledInput";
 
 // function declaration
 function App(props: any) {
@@ -33,6 +38,7 @@ function App(props: any) {
             <UncontrolledInput/>
             <TrackValueOfUncontrolledInput/>
             <ControlledInput/>
+            <GetValueOfUncontrolledInputByButtonPress/>
 
         </div>
     );
