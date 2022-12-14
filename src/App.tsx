@@ -7,7 +7,8 @@ import UnControlledAccordion from "./components/AccordionUnControlled/UnControll
 import {UnControlledRating} from "./components/UnControlledRating/UnControlledRating";
 import UnControlledOnOff from "./components/UnControlledOnOff/UnControlledOnOff";
 import {
-    ControlledInput,
+    ControlledCheckbox,
+    ControlledInput, ControlledInputWithFixedValue, ControlledSelect,
     GetValueOfUncontrolledInputByButtonPress,
     TrackValueOfUncontrolledInput,
     UncontrolledInput
@@ -37,7 +38,11 @@ function App(props: any) {
             <UnControlledOnOff onChange={setSwitchOn}/> {switchOn.toString()}
             <UncontrolledInput/>
             <TrackValueOfUncontrolledInput/>
+            <ControlledInputWithFixedValue/>
             <ControlledInput/>
+            <ControlledCheckbox/>
+            <ControlledSelect/>
+
             <GetValueOfUncontrolledInputByButtonPress/>
 
         </div>
