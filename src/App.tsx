@@ -26,7 +26,9 @@ function App(props: any) {
             {/*<UnControlledAccordion titleValue={"Users"}/>*/}
 
             <Accordion titleValue={"Menu"}
-                       collapsed={accordionCollapsed} onChange={() => {
+                       collapsed={accordionCollapsed}
+                       items={['anya','ira','feliks']}
+                       onChange={() => {
                 setAccordionCollapsed(!accordionCollapsed)
             }}/>
 
