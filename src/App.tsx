@@ -6,6 +6,7 @@ import OnOff from "./components/OnOff/OnOff";
 import UnControlledAccordion from "./components/AccordionUnControlled/UnControlledAccordion";
 import {UnControlledRating} from "./components/UnControlledRating/UnControlledRating";
 import UnControlledOnOff from "./components/UnControlledOnOff/UnControlledOnOff";
+import {ControlledInput, TrackValueOfUncontrolledInput, UncontrolledInput} from "./components/Input/UncontrolledInput";
 
 // function declaration
 function App(props: any) {
@@ -29,12 +30,9 @@ function App(props: any) {
             <OnOff on={switchOn} onChange={setSwitchOn}/>
 
             <UnControlledOnOff onChange={setSwitchOn}/> {switchOn.toString()}
-
-            {/*<UnControlledRating value={1}/>*/}
-            {/*<UnControlledRating value={2}/>*/}
-            {/*<UnControlledRating value={3}/>*/}
-            {/*<UnControlledRating value={4}/>*/}
-            {/*<UnControlledRating value={5}/>*/}
+            <UncontrolledInput/>
+            <TrackValueOfUncontrolledInput/>
+            <ControlledInput/>
 
         </div>
     );
