@@ -21,23 +21,31 @@ function App(props: any) {
     let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
     let [switchOn, setSwitchOn] = useState<boolean>(false); //hook with init value
 
+    const onClick = (value: string) => {
+        alert( `some item was clicked ${value}`)
+    }
     return (
         <div className={"App"}>
             {/*<UnControlledAccordion titleValue={"Users"}/>*/}
 
-            <Accordion titleValue={"Menu"}
-                       collapsed={accordionCollapsed}
-                       items={['anya','ira','feliks']}
-                       onChange={() => {
-                setAccordionCollapsed(!accordionCollapsed)
-            }}/>
             <Accordion titleValue={"Users"}
+                       collapsed={accordionCollapsed}
+                       items={[
+                           {title: 'anya', value: '1'},
+                           {title: 'ira', value: '2'},
+                           {title: 'feliks', value: '3'}
+                       ]}
+                       onChange={() => {
+                           setAccordionCollapsed(!accordionCollapsed)
+                       }}
+                       onClick={onClick}/>
+            <Accordion titleValue={"Menu"}
                        collapsed={accordionCollapsed}
                        items={[]}
                        onChange={() => {
-                setAccordionCollapsed(accordionCollapsed)
-            }}/>
-
+                           setAccordionCollapsed(accordionCollapsed)
+                       }}
+                       onClick={onClick}/>
 
 
             <Rating value={ratingValue}
