@@ -7,20 +7,21 @@ import {action} from "@storybook/addon-actions";
 // }
 
 export const UncontrolledInput = () => <input/>;
+
 export const TrackValueOfUncontrolledInput = () => {
+
     const [value, setValue] = useState("");
+
     const onChange = (event: ChangeEvent<HTMLInputElement>) => {
         const actualValue = event.currentTarget.value;
         setValue(actualValue)
     }
-
-
     return <> <input value={value} onChange={onChange}/>
     </>
 }
+
 export const GetValueOfUncontrolledInputByButtonPress = () => {
     const [value, setValue] = useState("");
-
 
     const inputRef = useRef<HTMLInputElement>(null);
 
