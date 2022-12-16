@@ -31,6 +31,14 @@ function App(props: any) {
                        onChange={() => {
                 setAccordionCollapsed(!accordionCollapsed)
             }}/>
+            <Accordion titleValue={"Users"}
+                       collapsed={accordionCollapsed}
+                       items={[]}
+                       onChange={() => {
+                setAccordionCollapsed(accordionCollapsed)
+            }}/>
+
+
 
             <Rating value={ratingValue}
                     onClick={setRatingValue}/>

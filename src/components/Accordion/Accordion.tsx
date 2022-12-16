@@ -9,7 +9,7 @@ type AccordionPropsType = {
     titleValue: string
     collapsed: boolean
     onChange: () => void
-    items: ItemPropsType
+    items: string[]
 }
 
 function Accordion(props: AccordionPropsType) {
@@ -36,12 +36,15 @@ function AccordionTitle(props: AccordionTitlePropsType) {
 }
 
 type AccordionBodyPropsType = {
-    items: ItemPropsType
+    items: string[]
 }
 
 const AccordionBody = (props: AccordionBodyPropsType) => {
 
-    return (<ul> {props.items.map((i, index) => <li key={index}> {i.title}</li>)}</ul>
+    return (
+        <ul>
+            {props.items.map((i, index) => <li key={index}> {i}</li>)}
+        </ul>
 
     )
 }
