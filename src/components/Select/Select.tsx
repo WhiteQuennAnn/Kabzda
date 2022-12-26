@@ -16,18 +16,19 @@ export function Select(props: SelectPropsType) {
     const [active, setActive] = useState(false);
 
     const selectedItem = props.items.find(i => i.value === props.value)
-
+    const showItems = () => {
+        setActive(true)
+    }
     return (
         <>
-
             <select>
                 <option value=""> Minsk</option>
                 <option value=""> Dubai</option>
                 <option value=""> London</option>
             </select>
-            <div className={styles.select + " "}>
+            <div className={styles.select}>
 
-                <h3> {selectedItem && selectedItem.title}</h3>
+                <h3 onClick={showItems}> {selectedItem && selectedItem.title}</h3>
                 {
                     active &&
 
