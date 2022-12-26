@@ -27,13 +27,7 @@ function App(props: any) {
     }
     return (
         <div className={"App"}>
-            <Select value={value} items={
-                [
-                    {value: '1', title: 'Minsk'},
-                    {value: '2', title: 'Dubai'},
-                    {value: '3', title: 'London'},
-                ]
-            } onChange={setValue}/>
+
             <Accordion titleValue={"Users"}
                        collapsed={accordionCollapsed}
                        items={[
@@ -67,7 +61,13 @@ function App(props: any) {
             <ControlledCheckbox/>
             <ControlledSelect/>
             <GetValueOfUncontrolledInputByButtonPress/>
-
+            <Select value={value} items={
+                [
+                    {value: '1', title: 'Minsk'},
+                    {value: '2', title: 'Dubai'},
+                    {value: '3', title: 'London'},
+                ]
+            } onChange={setValue}/>
         </div>
     );
 }

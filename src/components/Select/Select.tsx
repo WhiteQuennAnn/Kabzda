@@ -7,7 +7,7 @@ type ItemType = {
 }
 
 type SelectPropsType = {
-    value: any
+    value?: any
     onChange: (value: any) => void
     items: ItemType[]
 }
@@ -19,6 +19,7 @@ export function Select(props: SelectPropsType) {
     const toggleItems = () => {
         setActive(!active)
     }
+
     return (
         <>
             <select>
@@ -33,10 +34,16 @@ export function Select(props: SelectPropsType) {
                     active &&
 
                     <div className={styles.items}>
-                        {props.items.map(i => <div key={i.value}>{i.title}</div>)} </div>
+                        {props.items.map(i => <div
+                            key={i.value}
+                            onClick={() => {
+                                props.onChange(i.value)
+                            }}>
+                            {i.title}
+                        </div>)}
+                    </div>
                 }
             </div>
-
         </>
     )
 }
