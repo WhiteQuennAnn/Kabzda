@@ -25,9 +25,17 @@ export function Select(props: SelectPropsType) {
     const onItemClick = (value: any) => {
         props.onChange(value)
     }
-    const onKeyPress = (e:KeyboardEvent<HTMLDivElement>) => {
-        console.log('press')
-        e.preventDefault();
+    const onKeyUp = (e: KeyboardEventHandler<HTMLDivElement>) => {
+        for (let i = 0:
+        i < props.items.length;
+        i++
+    )
+        {
+            if (props.items[i].value === hoveredItem) {
+                setHoveredElementValue(props.items[i + 1].value);
+                break;
+            }
+        }
     }
 
     return (
@@ -39,7 +47,7 @@ export function Select(props: SelectPropsType) {
             </select>
             <div className={styles.select}
                  tabIndex={0}
-                 onKeyUp={onKeyPress}>
+                 onKeyUp={onKeyUp}>
 
                 <span className={styles.main} onClick={toggleItems}>
                     {selectedItem && selectedItem.title}</span>
