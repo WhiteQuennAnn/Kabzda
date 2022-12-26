@@ -29,12 +29,11 @@ export function Select(props: SelectPropsType) {
 
     const onKeyUp = (e: KeyboardEventHandler<HTMLDivElement>) => {
         for (let i = 0;
-        i < props.items.length;
-        i++
-    )
-        {
+             i < props.items.length;
+             i++
+        ) {
             if (props.items[i].value === hoveredItem) {
-                setHoveredElementValue(props.items[i + 1].value);
+                props.onChange(props.items[i + 1].value)
                 break;
             }
         }
