@@ -33,8 +33,10 @@ export function Select(props: SelectPropsType) {
              i++
         ) {
             if (props.items[i].value === hoveredItem) {
-                props.onChange(props.items[i + 1].value)
-                break;
+                if (props.items[i + 1].value) {
+                    props.onChange(props.items[i + 1].value)
+                    break;
+                }
             }
         }
     }
