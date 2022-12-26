@@ -12,12 +12,16 @@ type SelectPropsType = {
 }
 
 export function Select(props: SelectPropsType) {
-    console.log("UnControlledRating rendering")
-    const selectedItem = props.items.find( i=> i.value===props.value)
+
+    const selectedItem = props.items.find(i => i.value === props.value)
+
     return (
         <div>
-            <h3> {selectedItem && selectedItem.title }</h3>
-            {props.items.map(i => <div>{i.title}</div>)}
+            <option value=""> Minsk</option>
+            <option value=""> Dubai</option>
+            <option value=""> London</option>
+            <h3> {selectedItem && selectedItem.title}</h3>
+            {props.items.map(i => <div key={i.value}>{i.title}</div>)}
         </div>
     )
 }

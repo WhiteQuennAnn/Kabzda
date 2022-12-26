@@ -13,6 +13,7 @@ import {
     TrackValueOfUncontrolledInput,
     UncontrolledInput
 } from "./components/Input/UncontrolledInput";
+import {Select} from "./components/Select/Select";
 
 // function declaration
 function App(props: any) {
@@ -22,12 +23,11 @@ function App(props: any) {
     let [switchOn, setSwitchOn] = useState<boolean>(false); //hook with init value
 
     const onClick = (value: string) => {
-        alert( `some item was clicked ${value}`)
+        alert(`some item was clicked ${value}`)
     }
     return (
         <div className={"App"}>
-            {/*<UnControlledAccordion titleValue={"Users"}/>*/}
-
+            <Select value={} items={} onChange={}/>
             <Accordion titleValue={"Users"}
                        collapsed={accordionCollapsed}
                        items={[
