@@ -47,7 +47,6 @@ function App(props: any) {
                        }}
                        onClick={onClick}/>
 
-
             <Rating value={ratingValue}
                     onClick={setRatingValue}/>
             <UnControlledRating/>
@@ -61,6 +60,7 @@ function App(props: any) {
             <ControlledCheckbox/>
             <ControlledSelect/>
             <GetValueOfUncontrolledInputByButtonPress/>
+
             <Select value={value} items={
                 [
                     {value: '1', title: 'Minsk'},
