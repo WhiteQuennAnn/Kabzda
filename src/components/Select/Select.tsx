@@ -25,6 +25,9 @@ export function Select(props: SelectPropsType) {
     const onItemClick = (value: any) => {
         props.onChange(value)
     }
+    const onKeyPress = () => {
+        console.log('press')
+    }
 
     return (
         <>
@@ -35,9 +38,7 @@ export function Select(props: SelectPropsType) {
             </select>
             <div className={styles.select}
                  tabIndex={0}
-                 onKeyPress={() => {
-                     console.log('press')
-                 }}>
+                 onKeyPress={onKeyPress}>
 
                 <span className={styles.main} onClick={toggleItems}>
                     {selectedItem && selectedItem.title}</span>
