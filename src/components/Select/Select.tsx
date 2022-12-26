@@ -1,4 +1,4 @@
-import React, {KeyboardEventHandler, useState} from "react";
+import React, {KeyboardEventHandler, useEffect, useState} from "react";
 import styles from './Select.module.css';
 
 type ItemType = {
@@ -19,6 +19,11 @@ export function Select(props: SelectPropsType) {
     const selectedItem = props.items.find(i => i.value === props.value)
     const hoveredItem = props.items.find(i => i.value === hoveredElementValue)
 
+    useEffect(() => {
+        setHoveredElementValue(props.value)
+    }, [props.value])
+
+
     const toggleItems = () => {
         setActive(!active)
     }
@@ -27,7 +32,7 @@ export function Select(props: SelectPropsType) {
         toggleItems()
     }
 
-    const onKeyUp = (e: KeyboardEventHandler<HTMLDivElement>) => {
+    const onKeyUp = (event: KeyboardEvent<HTMLDivElement>) => {
         for (let i = 0;
              i < props.items.length;
              i++
