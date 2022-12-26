@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import styles from './Select.module.css';
 
 type ItemType = {
@@ -13,6 +13,7 @@ type SelectPropsType = {
 }
 
 export function Select(props: SelectPropsType) {
+    const [active, setActive] = useState(false);
 
     const selectedItem = props.items.find(i => i.value === props.value)
 
@@ -24,7 +25,7 @@ export function Select(props: SelectPropsType) {
                 <option value=""> Dubai</option>
                 <option value=""> London</option>
             </select>
-            <div className={styles.select + " " + styles.active}>
+            <div className={styles.select + " " + (active ? styles.active : " ")}>
                 <h3> {selectedItem && selectedItem.title}</h3>
 
                 <div className={styles.items}>
