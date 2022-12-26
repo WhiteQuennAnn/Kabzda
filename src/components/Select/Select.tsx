@@ -33,7 +33,11 @@ export function Select(props: SelectPropsType) {
                 <option value=""> Dubai</option>
                 <option value=""> London</option>
             </select>
-            <div className={styles.select}>
+            <div className={styles.select}
+                 tabIndex={0}
+                 onKeyPress={() => {
+                     console.log('press')
+                 }}>
 
                 <span className={styles.main} onClick={toggleItems}>
                     {selectedItem && selectedItem.title}</span>
