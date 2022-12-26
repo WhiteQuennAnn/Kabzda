@@ -24,9 +24,11 @@ export function Select(props: SelectPropsType) {
     }
     const onItemClick = (value: any) => {
         props.onChange(value)
+        toggleItems()
     }
+
     const onKeyUp = (e: KeyboardEventHandler<HTMLDivElement>) => {
-        for (let i = 0:
+        for (let i = 0;
         i < props.items.length;
         i++
     )
