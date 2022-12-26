@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {KeyboardEventHandler, useState} from "react";
 import styles from './Select.module.css';
 
 type ItemType = {
@@ -25,8 +25,9 @@ export function Select(props: SelectPropsType) {
     const onItemClick = (value: any) => {
         props.onChange(value)
     }
-    const onKeyPress = () => {
+    const onKeyPress = (e:KeyboardEvent<HTMLDivElement>) => {
         console.log('press')
+        e.preventDefault();
     }
 
     return (
@@ -38,7 +39,7 @@ export function Select(props: SelectPropsType) {
             </select>
             <div className={styles.select}
                  tabIndex={0}
-                 onKeyPress={onKeyPress}>
+                 onKeyUp={onKeyPress}>
 
                 <span className={styles.main} onClick={toggleItems}>
                     {selectedItem && selectedItem.title}</span>
