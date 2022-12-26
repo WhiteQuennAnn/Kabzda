@@ -4,12 +4,11 @@
 }
 
 .items {
-    display: none;
     padding: 5px;
     position: absolute;
     border: 1px solid black;
 
 }
-.select.active {
-    display: block;
-}
+/*.select.active {*/
+/*    display: block;*/
+/*}*/

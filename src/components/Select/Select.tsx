@@ -25,13 +25,17 @@ export function Select(props: SelectPropsType) {
                 <option value=""> Dubai</option>
                 <option value=""> London</option>
             </select>
-            <div className={styles.select + " " + (active ? styles.active : " ")}>
+            <div className={styles.select + " "}>
+
                 <h3> {selectedItem && selectedItem.title}</h3>
+                {
+                    active &&
 
-                <div className={styles.items}>
-                    {props.items.map(i => <div key={i.value}>{i.title}</div>)} </div>
-
+                    <div className={styles.items}>
+                        {props.items.map(i => <div key={i.value}>{i.title}</div>)} </div>
+                }
             </div>
+
         </>
     )
 }
