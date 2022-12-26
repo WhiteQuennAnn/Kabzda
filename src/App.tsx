@@ -21,13 +21,19 @@ function App(props: any) {
     let [ratingValue, setRatingValue] = useState<RatingValueType>(4)
     let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
     let [switchOn, setSwitchOn] = useState<boolean>(false); //hook with init value
-
+    const [value, setValue] = useState('2')
     const onClick = (value: string) => {
         alert(`some item was clicked ${value}`)
     }
     return (
         <div className={"App"}>
-            <Select value={} items={} onChange={}/>
+            <Select value={value} items={
+                [
+                    {value: '1', title: 'Minsk'},
+                    {value: '2', title: 'Dubai'},
+                    {value: '3', title: 'London'},
+                ]
+            } onChange={setValue}/>
             <Accordion titleValue={"Users"}
                        collapsed={accordionCollapsed}
                        items={[

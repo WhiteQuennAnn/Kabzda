@@ -28,7 +28,7 @@ export function Select(props: SelectPropsType) {
             </select>
             <div className={styles.select}>
 
-                <h3 onClick={toggleItems}> {selectedItem && selectedItem.title}</h3>
+                <span className={styles.main} onClick={toggleItems}> {selectedItem && selectedItem.title}</span>
                 {
                     active &&
 
