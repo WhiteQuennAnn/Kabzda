@@ -17,15 +17,20 @@ export function Select(props: SelectPropsType) {
     const selectedItem = props.items.find(i => i.value === props.value)
 
     return (
-        <div className={styles.select}>
+        <>
+
             <select>
                 <option value=""> Minsk</option>
                 <option value=""> Dubai</option>
                 <option value=""> London</option>
             </select>
+            <div className={styles.select}>
+                <h3> {selectedItem && selectedItem.title}</h3>
 
-            <h3> {selectedItem && selectedItem.title}</h3>
-            {props.items.map(i => <div key={i.value}>{i.title}</div>)}
-        </div>
+                <div className={styles.items}>
+                    {props.items.map(i => <div key={i.value}>{i.title}</div>)} </div>
+
+            </div>
+        </>
     )
 }
