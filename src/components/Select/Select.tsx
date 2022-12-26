@@ -1,4 +1,5 @@
 import React from "react";
+import styles from './Select.module.css';
 
 type ItemType = {
     title: string
@@ -16,10 +17,13 @@ export function Select(props: SelectPropsType) {
     const selectedItem = props.items.find(i => i.value === props.value)
 
     return (
-        <div>
-            <option value=""> Minsk</option>
-            <option value=""> Dubai</option>
-            <option value=""> London</option>
+        <div className={styles.select}>
+            <select>
+                <option value=""> Minsk</option>
+                <option value=""> Dubai</option>
+                <option value=""> London</option>
+            </select>
+
             <h3> {selectedItem && selectedItem.title}</h3>
             {props.items.map(i => <div key={i.value}>{i.title}</div>)}
         </div>
