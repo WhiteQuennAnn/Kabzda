@@ -5,7 +5,11 @@ type AccordionPropsType = {
     // collapsed: boolean
 }
 
-const reducer =(state, action) => {
+type ActionType = {
+    type: string
+}
+
+const reducer = (state: boolean, action: ActionType) => {
 
 
     return state
@@ -14,11 +18,13 @@ const reducer =(state, action) => {
 function UnControlledAccordion(props: AccordionPropsType) {
 
     console.log("UnControlledAccordion rendering")
-    let [collapsed, setCollapsed ]  = useState(false);
+    let [collapsed, setCollapsed] = useState(false);
 
     return (
         <div>
-            <AccordionTitle title={props.titleValue} onClick={ () => {setCollapsed( !collapsed)}}/>
+            <AccordionTitle title={props.titleValue} onClick={() => {
+                setCollapsed(!collapsed)
+            }}/>
 
             {/*<button onClick={ () => {setCollapsed( !collapsed)}}> TOGGLE</button>*/}
             {!collapsed && <AccordionBody/>}
@@ -28,13 +34,15 @@ function UnControlledAccordion(props: AccordionPropsType) {
 
 type AccordionTitlePropsType = {
     title: string
-    onClick: ()=> void
+    onClick: () => void
 }
 
 function AccordionTitle(props: AccordionTitlePropsType) {
     console.log("AccordionTitle rendering")
     return (
-        <h3 onClick={ () => { props.onClick() } }> {props.title} </h3>
+        <h3 onClick={() => {
+            props.onClick()
+        }}> {props.title} </h3>
     )
 }
 
