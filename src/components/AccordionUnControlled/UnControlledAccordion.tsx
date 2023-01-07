@@ -5,6 +5,12 @@ type AccordionPropsType = {
     // collapsed: boolean
 }
 
+const reducer =(state, action) => {
+
+
+    return state
+}
+
 function UnControlledAccordion(props: AccordionPropsType) {
 
     console.log("UnControlledAccordion rendering")
