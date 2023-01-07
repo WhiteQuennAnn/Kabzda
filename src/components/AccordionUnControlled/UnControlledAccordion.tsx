@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useReducer, useState} from "react";
 
 type AccordionPropsType = {
     titleValue: string
@@ -18,7 +18,8 @@ const reducer = (state: boolean, action: ActionType) => {
 function UnControlledAccordion(props: AccordionPropsType) {
 
     console.log("UnControlledAccordion rendering")
-    let [collapsed, setCollapsed] = useState(false);
+    // let [collapsed, setCollapsed] = useState(false);
+    let [collapsed, setCollapsed] = useReducer(reducer, false);
 
     return (
         <div>
