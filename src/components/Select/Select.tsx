@@ -32,7 +32,7 @@ export function Select(props: SelectPropsType) {
         toggleItems()
     }
 
-    const onKeyUp = (event: any) => {
+    const onKeyUp = (e:  KeyboardEventHandler<HTMLDivElement> ) => {
         if (e.key === "ArrowDown" || e.key === "ArrowUp") {
             for (let i = 0;
                  i < props.items.length;
@@ -65,7 +65,7 @@ export function Select(props: SelectPropsType) {
             </select>
             <div className={styles.select}
                  tabIndex={0}
-                 onKeyUp={onKeyUp}>
+                 onKeyUpCapture={onKeyUp}>
 
                 <span className={styles.main} onClick={toggleItems}>
                     {selectedItem && selectedItem.title}</span>
