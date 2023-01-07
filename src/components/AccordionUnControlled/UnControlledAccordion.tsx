@@ -13,8 +13,11 @@ const TOGGLE_CONSTANT = 'TOGGLE-COLLAPSED'
 
 const reducer = (state: boolean, action: ActionType) => {
 
-    if (action.type === TOGGLE_CONSTANT) {
-        return !state;
+    switch (action.type) {
+        case TOGGLE_CONSTANT:
+            return !state;
+        default:
+            return state
     }
 
     return state
