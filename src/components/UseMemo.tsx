@@ -52,7 +52,10 @@ const Users = React.memo(UsersSecret);
 export const HelpsToReactMemo = () => {
     console.log('HelpsToReactMemo')
     const [counter, setCounter] = useState(0);
-    const [users, setUsers] = useState(["Anna", "Igor", "Dima"])
+    const [users, setUsers] = useState(["Anna", "Igor", "Dima"]);
+
+    const newArray = users.filter(u => u.toLowerCase().indexOf("a") > -1);
+
 
     return <>
         <button onClick={() => {
@@ -60,6 +63,6 @@ export const HelpsToReactMemo = () => {
         }}> +
         </button>
         {counter}
-        <Users users={users.filter(u => u.toLowerCase().indexOf("a") > -1)}/>
+        <Users users={newArray}/>
     </>
 }
