@@ -20,7 +20,8 @@ export const Example = () => {
     const [users, setUsers] = useState(["Anna", "Igor", "Dima"])
 
     const addUser = () => {
-
+        const newUsers = [...users, 'Svetlana' + new Date().getTime()];
+        setUsers(newUsers)
     }
 
     return <>
