@@ -27,12 +27,12 @@ export function Select(props: SelectPropsType) {
     const toggleItems = () => {
         setActive(!active)
     }
-    const onItemClick = (value: any) => {
+    const onItemClick = (value: string) => {
         props.onChange(value)
         toggleItems()
     }
 
-    const onKeyUp = (e:  KeyboardEventHandler<HTMLDivElement> ) => {
+    const onKeyUp = (e:  KeyboardEvent<HTMLDivElement> ) => {
         if (e.key === "ArrowDown" || e.key === "ArrowUp") {
             for (let i = 0;
                  i < props.items.length;
