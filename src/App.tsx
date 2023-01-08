@@ -14,6 +14,7 @@ import {
     UncontrolledInput
 } from "./components/Input/UncontrolledInput";
 import {Select} from "./components/Select/Select";
+import {Example} from "./components/ReactMemo";
 
 // function declaration
 function App(props: any) {
@@ -27,7 +28,7 @@ function App(props: any) {
     }
     return (
         <div className={"App"}>
-
+            <Example/>
             <Accordion titleValue={"Users"}
                        collapsed={accordionCollapsed}
                        items={[
