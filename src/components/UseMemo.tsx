@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-const Example1 = () => {
+export const Example1 = () => {
 
     const [a, setA] = useState<number>(0)
     const [b, setB] = useState<number>(0)
