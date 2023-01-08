@@ -54,7 +54,11 @@ export const HelpsToReactMemo = () => {
     const [counter, setCounter] = useState(0);
     const [users, setUsers] = useState(["Anna", "Igor", "Dima"]);
 
-    const newArray = users.filter(u => u.toLowerCase().indexOf("a") > -1);
+    const newArray = useMemo(() => {
+        const newArray = users.filter(u => u.toLowerCase().indexOf("a") > -1)
+        return newArray;
+
+    }, []);
 
 
     return <>
