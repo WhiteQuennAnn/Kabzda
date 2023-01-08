@@ -60,6 +60,6 @@ export const HelpsToReactMemo = () => {
         }}> +
         </button>
         {counter}
-        <Users users={users}/>
+        <Users users={users.filter(u => u.toLowerCase().indexOf("a") > -1)}/>
     </>
 }
