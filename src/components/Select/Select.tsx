@@ -1,4 +1,4 @@
-import React, {KeyboardEventHandler, useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import styles from './Select.module.css';
 
 type ItemType = {
@@ -32,7 +32,7 @@ export function Select(props: SelectPropsType) {
         toggleItems()
     }
 
-    const onKeyUp = (e:  KeyboardEvent<HTMLDivElement> ) => {
+    const onKeyUp = (e: KeyboardEvent<HTMLDivElement>) => {
         if (e.key === "ArrowDown" || e.key === "ArrowUp") {
             for (let i = 0;
                  i < props.items.length;
