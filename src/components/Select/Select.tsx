@@ -32,7 +32,7 @@ export function Select(props: SelectPropsType) {
         toggleItems()
     }
 
-    const onKeyUp = (e: KeyboardEvent<HTMLDivElement>) => {
+    const onKeyUp = (e: Keyboard<HTMLDivElement>) => {
         if (e.key === "ArrowDown" || e.key === "ArrowUp") {
             for (let i = 0;
                  i < props.items.length;
