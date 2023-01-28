@@ -65,7 +65,7 @@ export function Select(props: SelectPropsType) {
             </select>
             <div className={styles.select}
                  tabIndex={0}
-                 onKeyUpCapture={onKeyUp}>
+                 onKeyPressCapture={onKeyUp}>
 
                 <span className={styles.main} onClick={toggleItems}>
                     {selectedItem && selectedItem.title}</span>
