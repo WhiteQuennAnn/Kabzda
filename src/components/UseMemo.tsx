@@ -85,12 +85,12 @@ export const LikeUseCallBack = () => {
         return newArray;
 
     }, [books]);
-    const addBook = () => {
-        const newBooks = [...books, 'Angular' + new Date().getTime()];
-        setBooks(newBooks)
-    }
+
     const memoizedAddBook = useMemo(() => {
-            return addBook
+            return () => {
+                const newBooks = [...books, 'Angular' + new Date().getTime()];
+                setBooks(newBooks)
+            }
         }
         , [books])
 
