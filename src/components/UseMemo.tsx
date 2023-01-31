@@ -50,7 +50,7 @@ const UsersSecret = (props: { users: string[] }) => {
 const Users = React.memo(UsersSecret);
 
 export const HelpsToReactMemo = () => {
-    console.log('HelpsToReactMemo')
+    console.log('LikeUseCallBack')
     const [counter, setCounter] = useState(0);
     const [users, setUsers] = useState(["Anna", "Igor", "Dima"]);
 
@@ -64,15 +64,30 @@ export const HelpsToReactMemo = () => {
         setUsers(newUsers)
     }
 
+    export const LikeUseCallBack = () => {
+        console.log('LikeUseCallBack')
+        const [counter, setCounter] = useState(0);
+        const [users, setUsers] = useState(["Anna", "Igor", "Dima"]);
 
-    return <>
-        <button onClick={() => {
-            setCounter(counter + 1)
-        }}> +
-        </button>
-        <button onClick={addUser}> add user
-        </button>
-        {counter}
-        <Users users={newArray}/>
-    </>
-}
+        const newArray = useMemo(() => {
+            const newArray = users.filter(u => u.toLowerCase().indexOf("a") > -1)
+            return newArray;
+
+        }, [users]);
+        const addUser = () => {
+            const newUsers = [...users, 'Svetlana' + new Date().getTime()];
+            setUsers(newUsers)
+        }
+
+
+        return <>
+            <button onClick={() => {
+                setCounter(counter + 1)
+            }}> +
+            </button>
+            <button onClick={addUser}> add user
+            </button>
+            {counter}
+            <Users users={newArray}/>
+        </>
+    }
