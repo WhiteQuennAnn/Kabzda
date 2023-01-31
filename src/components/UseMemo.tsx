@@ -98,10 +98,16 @@ export const LikeUseCallBack = () => {
         </button>
 
         {counter}
-        <Book books={newArray}/>
+        <Book books={newArray} addBook={addBook}/>
     </>
 }
-const BooksSecret = (props: { books: string[], addBook: () => void }) => {
+
+
+type bookSecretPropsType = {
+    books: string[]
+    addBook: () => void
+}
+const BooksSecret = (props: bookSecretPropsType) => {
     console.log('BooksSecret')
     return <div>
         <button onClick={() => props.addBook()}> add book
