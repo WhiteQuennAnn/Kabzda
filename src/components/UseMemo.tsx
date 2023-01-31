@@ -89,7 +89,10 @@ export const LikeUseCallBack = () => {
         const newBooks = [...books, 'Angular' + new Date().getTime()];
         setBooks(newBooks)
     }
-    const memoizedAddBook = useMemo(addBook, [books])
+    const memoizedAddBook = useMemo(() => {
+            return addBook
+        }
+        , [books])
 
     return <>
         <button onClick={() => {
@@ -98,7 +101,7 @@ export const LikeUseCallBack = () => {
         </button>
 
         {counter}
-        <Book books={newArray} addBook={addBook}/>
+        <Book books={newArray} addBook={memoizedAddBook}/>
     </>
 }
 
