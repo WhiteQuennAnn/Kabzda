@@ -1,4 +1,4 @@
-import React, {useMemo, useState} from "react";
+import React, {useCallback, useMemo, useState} from "react";
 
 export const DifficultCounter = () => {
 
@@ -91,6 +91,14 @@ export const LikeUseCallBack = () => {
                 const newBooks = [...books, 'Angular' + new Date().getTime()];
                 setBooks(newBooks)
             }
+        }
+        , [books])
+
+    const memoizedAddBook2 = useCallback(() => {
+
+            const newBooks = [...books, 'Angular' + new Date().getTime()];
+            setBooks(newBooks)
+
         }
         , [books])
 
