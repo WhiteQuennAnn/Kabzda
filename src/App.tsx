@@ -15,7 +15,7 @@ import {
 } from "./components/Input/UncontrolledInput";
 import {Select} from "./components/Select/Select";
 import {Example} from "./components/ReactMemo";
-import {DifficultCounter, HelpsToReactMemo, LikeUseCallBack} from "./components/UseMemo";
+import {DifficultCounter, HelpsToReactMemo, LikeUseCallBack} from "./components/UseMemoUseCallback";
 
 // function declaration
 function App(props: any) {
