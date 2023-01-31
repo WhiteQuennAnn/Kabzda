@@ -63,31 +63,49 @@ export const HelpsToReactMemo = () => {
         const newUsers = [...users, 'Svetlana' + new Date().getTime()];
         setUsers(newUsers)
     }
+    return <>
+        <button onClick={() => {
+            setCounter(counter + 1)
+        }}> +
+        </button>
+        <button onClick={addUser}> add user
+        </button>
+        {counter}
+        <Users users={newArray}/>
+    </>
+}
 
-    export const LikeUseCallBack = () => {
-        console.log('LikeUseCallBack')
-        const [counter, setCounter] = useState(0);
-        const [users, setUsers] = useState(["Anna", "Igor", "Dima"]);
+export const LikeUseCallBack = () => {
+    console.log('LikeUseCallBack')
+    const [counter, setCounter] = useState(0);
+    const [books, setBooks] = useState(["JS", "React", "Css"]);
 
-        const newArray = useMemo(() => {
-            const newArray = users.filter(u => u.toLowerCase().indexOf("a") > -1)
-            return newArray;
+    const newArray = useMemo(() => {
+        const newArray = books.filter(u => u.toLowerCase().indexOf("a") > -1)
+        return newArray;
 
-        }, [users]);
-        const addUser = () => {
-            const newUsers = [...users, 'Svetlana' + new Date().getTime()];
-            setUsers(newUsers)
-        }
-
-
-        return <>
-            <button onClick={() => {
-                setCounter(counter + 1)
-            }}> +
-            </button>
-            <button onClick={addUser}> add user
-            </button>
-            {counter}
-            <Users users={newArray}/>
-        </>
+    }, [books]);
+    const addBook = () => {
+        const newBooks = [...books, 'Angular' + new Date().getTime()];
+        setBooks(newBooks)
     }
+
+
+    return <>
+        <button onClick={() => {
+            setCounter(counter + 1)
+        }}> +
+        </button>
+        <button onClick={addBook}> add bok
+        </button>
+        {counter}
+        <Book books={newArray}/>
+    </>
+}
+const BooksSecret = (props: { books: string[] }) => {
+    console.log('BooksSecret')
+    return <div> {props.books.map((book, i) => <div key={i}>{book}</div>)}</div>
+}
+
+const Book = React.memo(BooksSecret);
+}
