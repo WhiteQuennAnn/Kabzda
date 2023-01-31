@@ -96,16 +96,18 @@ export const LikeUseCallBack = () => {
             setCounter(counter + 1)
         }}> +
         </button>
-        <button onClick={addBook}> add bok
-        </button>
+
         {counter}
         <Book books={newArray}/>
     </>
 }
-const BooksSecret = (props: { books: string[] }) => {
+const BooksSecret = (props: { books: string[], addBook: () => void }) => {
     console.log('BooksSecret')
-    return <div> {props.books.map((book, i) => <div key={i}>{book}</div>)}</div>
+    return <div>
+        <button onClick={() => props.addBook()}> add book
+        </button>
+        {props.books.map((book, i) => <div key={i}>{book}</div>)}</div>
 }
 
-const Book = React.memo(BooksSecret);
-}
+const Book = React.memo(BooksSecret)
+
